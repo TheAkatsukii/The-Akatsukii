@@ -1,26 +1,296 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   DESIGN TOKENS
+   ========================================================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ------------------------------------------------------------------------
+     Color System
+     ------------------------------------------------------------------------ */
+     --bg-primary: #6ed5e3;
+     --bg-info: #0dcaf0;
+  /* Paper */
+  --color-paper: #f6f5f1;
+  --color-paper-raised: #ffffff;
+
+  /* Ink */
+  --color-ink: #14161c;
+  --color-ink-soft: #4a4e5a;
+
+  /* Graphite */
+  --color-graphite: #1b1e26;
+  --color-graphite-raised: #262a34;
+  --color-graphite-ink: #eceef2;
+  --color-graphite-ink-soft: #a3a8b5;
+
+  /* Accent */
+  --color-signal: #2f4cdb;
+  --color-signal-dim: #1e3399;
+  --color-signal-tint: #e9ecfb;
+
+  /* Borders */
+  --color-border: #e4e3de;
+  --color-border-dark: #333744;
+
+  /* Utility */
+  --color-success: #198754;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+
+  /* Supporting */
+  --color-steel: #8a8f9c;
+  --color-steel-soft: #e4e3de;
+  --color-steel-soft-dark: #333744;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ==========================================================================
+   THEME TOKENS (Tailwind v4)
+   ========================================================================== */
+
+@theme {
+  /* Colors */
+  --color-paper: #f6f5f1;
+  --color-paper-raised: #ffffff;
+
+  --color-ink: #14161c;
+  --color-ink-soft: #4a4e5a;
+
+  --color-graphite: #1b1e26;
+  --color-graphite-raised: #262a34;
+  --color-graphite-ink: #eceef2;
+  --color-graphite-ink-soft: #a3a8b5;
+
+  --color-signal: #2f4cdb;
+  --color-signal-dim: #1e3399;
+  --color-signal-tint: #e9ecfb;
+
+  --color-border: #e4e3de;
+  --color-border-dark: #333744;
+
+  --color-steel: #8a8f9c;
+  --color-steel-soft: #e4e3de;
+  --color-steel-soft-dark: #333744;
+
+  --color-success: #198754;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+
+  /* Typography */
+  --font-display: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+
+  /* Fluid Type Scale */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.84rem + 0.15vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.07rem + 0.3vw, 1.25rem);
+  --text-xl: clamp(1.375rem, 1.28rem + 0.5vw, 1.625rem);
+  --text-2xl: clamp(1.75rem, 1.6rem + 0.8vw, 2.25rem);
+  --text-3xl: clamp(2.25rem, 1.95rem + 1.5vw, 3.25rem);
+  --text-4xl: clamp(2.75rem, 2.3rem + 2.2vw, 4.25rem);
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.5rem;
+  --spacing-6: 2rem;
+  --spacing-8: 3rem;
+  --spacing-10: 4rem;
+  --spacing-12: 6rem;
+  --spacing-16: 8rem;
+
+  /* Layout */
+  --container-max: 1280px;
+  --content-max: 720px;
+  --section-space: clamp(5rem, 8vw, 8rem);
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(20, 22, 28, 0.06);
+  --shadow-md: 0 4px 16px rgba(20, 22, 28, 0.08);
+  --shadow-lg: 0 12px 32px rgba(20, 22, 28, 0.12);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 450ms;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: var(--text-4xl);
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+  }
+
+  h3 {
+    font-size: var(--text-2xl);
+  }
+
+  h4 {
+    font-size: var(--text-xl);
+  }
+
+  p {
+    color: var(--color-ink-soft);
+  }
+
+  a[href]:not([class]) {
+    color: var(--color-signal);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition:
+      color var(--duration-fast) var(--ease-standard);
+  }
+
+  a[href]:not([class]):hover {
+    color: var(--color-signal-dim);
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+
+  code {
+    background: var(--color-signal-tint);
+    color: var(--color-signal-dim);
+    padding: 0.15em 0.4em;
+    border-radius: var(--radius-sm);
+  }
+
+  ::selection {
+    background: var(--color-signal-tint);
+    color: var(--color-signal-dim);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+
+@utility container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
+}
+
+@utility content {
+  width: 100%;
+  max-width: var(--content-max);
+}
+
+@utility section {
+  padding-block: var(--section-space);
+}
+
+@utility surface-graphite {
+  background-color: var(--color-graphite);
+  color: var(--color-graphite-ink);
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    color: var(--color-graphite-ink);
+  }
+
+  & p {
+    color: var(--color-graphite-ink-soft);
+  }
+}
+
+@utility label-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-steel);
+}
+
+@utility border-subtle {
+  border: 1px solid var(--color-border);
+}
+
+@utility border-subtle-dark {
+  border: 1px solid var(--color-border-dark);
 }
