@@ -16,7 +16,7 @@ const posts: Post[] = [
     excerpt:
       "The architectural decisions made early in a project often determine its long-term success.",
     href: "/insights/why-we-plan-before-we-build",
-    image: "/assets/site/insight-1.jpg",
+    image: "/assets/site/insight-1.png",
     tag: "Architecture",
     date: "2026-07-01",
   },
@@ -25,7 +25,7 @@ const posts: Post[] = [
     excerpt:
       "A practical guide to deciding when off-the-shelf tools stop supporting business growth.",
     href: "/insights/custom-software-right-choice",
-    image: "/assets/site/insight-2.jpg",
+    image: "/assets/site/insight-2.png",
     tag: "Strategy",
     date: "2026-06-18",
   },
@@ -34,7 +34,7 @@ const posts: Post[] = [
     excerpt:
       "Growth creates complexity. Good architecture helps absorb it without slowing the business down.",
     href: "/insights/designing-scalable-systems",
-    image: "/assets/site/insight-3.jpg",
+    image: "/assets/site/insight-3.png",
     tag: "Engineering",
     date: "2026-05-27",
   },
@@ -43,7 +43,7 @@ const posts: Post[] = [
     excerpt:
       "What modern eCommerce teams should focus on beyond conversion rates and visual design.",
     href: "/insights/better-commerce-experiences",
-    image: "/assets/site/insight-4.jpg",
+    image: "/assets/site/insight-4.png",
     tag: "Commerce",
     date: "2026-05-03",
   },
