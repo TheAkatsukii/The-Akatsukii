@@ -1,5 +1,5 @@
+import { AboutSection } from "@/components/About";
 import ApproachSection from "@/components/Approach";
-import ContactSection from "@/components/Contact";
 import FeaturedWorkSection from "@/components/FeaturedWork";
 import Footer from "@/components/Footer";
 import Header from "@/components/header";
@@ -7,7 +7,7 @@ import Hero from "@/components/Hero";
 import InsightsSection from "@/components/Insights";
 import SpecialisationsSection from "@/components/Specialisation";
 import WhatWeDoSection from "@/components/WhatWeDo";
-import Image from "next/image";
+import WorkPage from "@/components/Work";
 
 export default function Home() {
   return (
@@ -15,11 +15,12 @@ export default function Home() {
       <Header />
       <Hero />
       <ApproachSection />
-      <WhatWeDoSection />
-      <SpecialisationsSection />
+      {/*<WhatWeDoSection />*/}
+      <AboutSection />
+      {/*<SpecialisationsSection />*/}
       <FeaturedWorkSection />
-      <InsightsSection />
-      <ContactSection />
+      {/*<InsightsSection />*/}
+      <WorkPage />
       <Footer />
     </>
   );

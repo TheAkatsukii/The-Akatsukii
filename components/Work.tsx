@@ -65,7 +65,7 @@ export default function WorkPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24" id="featured">
         <div className="container">
           <span className="label-mono">Work</span>
 
@@ -147,7 +147,7 @@ export default function WorkPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24" id="contact">
         <div className="container">
           <div className="rounded-lg border border-steel-soft bg-paper-raised p-8 md:p-12">
             <span className="label-mono">Start a Project</span>
@@ -174,7 +174,7 @@ export default function WorkPage() {
                 href="/about"
                 className="rounded-md border border-steel-soft px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink"
               >
-                Learn More About Architect.
+                Learn More About The Akatsukii
               </Link>
             </div>
           </div>

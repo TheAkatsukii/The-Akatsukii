@@ -20,11 +20,11 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Architect.",
-    template: "%s | Architect.",
+    default: "The Akatsukii",
+    template: "%s | The Akatsukii",
   },
   description:
-    "Software, systems and commerce experiences built with precision.",
+    "An independent software collective building products, platforms and experiments from the ground up.",
 };
 
 export default function RootLayout({

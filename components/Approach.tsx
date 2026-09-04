@@ -8,7 +8,7 @@ export default function ApproachSection() {
         {/* Left: image */}
         <div className="order-1">
           <div className="relative aspect-[1026/802] w-full overflow-hidden rounded-lg">
-            <div role="img" aria-label="Tamayaz Development illustration">
+            <div role="img" aria-label="The Akatsukii Development illustration">
               <img
                 className="w-3rem h-4rem"
                 src="/assets/site/Listening-To-Feedback--Streamline-Djakarta.png"

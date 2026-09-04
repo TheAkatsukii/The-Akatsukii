@@ -76,7 +76,7 @@ export default function FeaturedWorkSection() {
   };
 
   return (
-    <section className="surface-graphite py-16 md:py-24">
+    <section className="surface-graphite py-16 md:py-24" id="work">
       <div className="container">
         <div className="flex items-end justify-between gap-8">
           <div>

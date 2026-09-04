@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="section">
+    <section className="section" id="home">
       <div className="container grid items-center gap-16 md:grid-cols-2">
         {/* Left: Copy */}
         <div className="order-2 md:order-1">
@@ -18,14 +18,14 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="/contact"
+              href="#contact"
               className="rounded-md bg-ink px-6 py-3 text-sm font-medium text-paper transition-colors hover:bg-signal"
             >
               Start a Project
             </Link>
 
             <Link
-              href="/work"
+              href="#work"
               className="bg-(--bg-primary) rounded-md border border-border px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink"
             >
               View Our Work

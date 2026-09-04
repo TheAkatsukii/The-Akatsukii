@@ -10,10 +10,10 @@ const serviceLinks = [
 ];
 
 const companyLinks = [
-  { label: "Work", href: "/work" },
-  { label: "About", href: "/about" },
-  { label: "Insights", href: "/insights" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Work", href: "#work" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Footer() {
@@ -28,9 +28,8 @@ export default function Footer() {
             <Logo inverted />
 
             <p className="mt-6 max-w-md text-graphite-ink-soft">
-              Software engineered for growth. We help businesses
-              design, build and maintain products, platforms and
-              digital infrastructure that lasts.
+              An independent software collective building products,
+              platforms and experiments from the ground up.
             </p>
 
             <Link
@@ -87,10 +86,10 @@ export default function Footer() {
               </span>
 
               <a
-                href="mailto:hello@tamayaz.dev"
+                href="mailto:hello@theakatsukii.com"
                 className="mt-4 block text-sm text-graphite-ink-soft transition-colors hover:text-graphite-ink"
               >
-                hello@tamayaz.dev
+                hello@theakatsukii.com
               </a>
             </div>
           </div>
@@ -99,7 +98,7 @@ export default function Footer() {
         <div className="mt-16 border-t border-steel-soft-dark pt-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <span className="text-xs text-graphite-ink-soft">
-              © {year} Tamayaz. Built with intention.
+              © {year} The Akatsukii. Built with intention.
             </span>
 
             <div className="flex gap-6">
