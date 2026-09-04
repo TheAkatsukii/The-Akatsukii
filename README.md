@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# THE AKATSUKII
 
-## Getting Started
+Official website for **The Akatsukii** — an independent software engineering collective building products, platforms, and experiments from the ground up.
 
-First, run the development server:
+## 🧱 The Collective
+
+The Akatsukii is a two-person collective focused on technical precision, experimental building, and shipping software that has a reason to exist.
+
+- **[ThatDev](https://github.com/LukhanyoV)** (Lukhanyo Vakele) — *Backend Hacker*
+- **[ThatG33k](https://github.com/Yonela-Johannes)** (Yonela Johannes) — *Frontend Hacker*
+
+## 💡 Philosophy
+
+> "We would rather build the future than wait for it."
+
+We build software from the ground up — products, platforms, experiments and ideas that start as conversations and become something people can actually use. One of us lives closer to the interface. The other lives deeper in the machinery. Together, we design, build, break, rebuild and ship.
+
+## 🚀 Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **UI Components:** React 19
+- **Fonts:** Space Grotesk (Display), Inter (Body), JetBrains Mono (Code)
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed (LTS recommended).
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+Run the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a production-ready build:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Presence
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Website:** [theakatsukii.github.io](https://theakatsukii.github.io/)
+- **GitHub Organization:** [github.com/TheAkatsukii](https://github.com/TheAkatsukii)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with intention by The Akatsukii.
